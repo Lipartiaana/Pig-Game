@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top left, #f99417 0%, #5d3891 100%);
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  border-radius: 10px;
+}
+
+.player,
+.buttons {
+  padding: 60px 20px;
+  text-align: center;
+  height: 500px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.active-player {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.name {
+  color: #5d3891;
+  font-weight: 400;
+}
+
+.score {
+  font-size: 60px;
+  color: #f99417;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.results {
+  margin: 0 60px;
+  background-color: #5d3891;
+  color: #f99417;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.current-score {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fff;
+  font-weight: 600;
+  color: #5d3891;
+  box-shadow: 3px 5px #777;
+}
+
+.dice {
+  width: 60px;
+  height: 60px;
+  border-radius: 7px;
+  box-shadow: 5px 5px #777;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: translateY(20%);
+}
+
+i {
+  color: #f99417;
+  margin-right: 5px;
+}
+
+@media (max-width: 769px) {
+  .board {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .player {
+    height: 270px;
+    padding: 30px 20px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+    height: fit-content;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .score {
+    font-size: 50px;
+  }
+
+  .results {
+    padding: 10px;
+    gap: 10px;
+  }
+}
