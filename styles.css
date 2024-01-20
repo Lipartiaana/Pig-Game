@@ -18,6 +18,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   border-radius: 10px;
+  max-height: 95vh;
 }
 
 .player,
@@ -25,6 +26,7 @@ body {
   padding: 60px 20px;
   text-align: center;
   height: 500px;
+  max-height: 95vh;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -114,17 +116,24 @@ i {
   }
 
   .player {
-    height: 270px;
+    justify-content: space-around;
+    height: 300px;
     padding: 30px 20px;
   }
 
   .buttons {
     flex-direction: row;
-    width: 400px;
+    width: 500px;
+    max-width: 95%;
     justify-content: space-between;
     height: fit-content;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .btn,
+  .dice {
+    margin: 0 3px;
   }
 
   .name {
@@ -138,5 +147,26 @@ i {
   .results {
     padding: 10px;
     gap: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .board,
+  .player {
+    width: 98%;
+  }
+}
+
+@media (max-height: 400px) {
+  .board {
+    flex-direction: row;
+    height: fit-content;
+    max-width: 98%;
+  }
+
+  .player {
+    justify-content: space-around;
+    height: 300px;
+    padding: 30px 10px;
   }
 }
